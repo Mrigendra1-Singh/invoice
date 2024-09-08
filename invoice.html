@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="invoice-container" id="invoice">
+        <header>
+            <div class="logo">
+                <img src="logo_placeholder.png" alt="Company Logo">
+            </div>
+            <h1>Invoice</h1>
+        </header>
+
+        <section class="details">
+            <div class="seller-info">
+                <h3>Seller Details</h3>
+                <p id="seller-name">Seller: ABC Pvt Ltd</p>
+                <p id="seller-address">Address: 123 Street, City</p>
+                <p id="seller-pan">PAN No: ABCDE1234F</p>
+                <p id="seller-gst">GST No: 22ABCDE1234F1Z5</p>
+            </div>
+
+            <div class="billing-info">
+                <h3>Billing Details</h3>
+                <p id="billing-name">Name: Customer Name</p>
+                <p id="billing-address">Address: 456 Billing Street, Billing City</p>
+            </div>
+
+            <div class="shipping-info">
+                <h3>Shipping Details</h3>
+                <p id="shipping-name">Name: Shipping Name</p>
+                <p id="shipping-address">Address: 789 Shipping Street, Shipping City</p>
+            </div>
+        </section>
+
+        <section class="order-info">
+            <p>Order No: <span id="order-no">12345</span></p>
+            <p>Order Date: <span id="order-date">01/09/2024</span></p>
+            <p>Invoice No: <span id="invoice-no">INV12345</span></p>
+            <p>Invoice Date: <span id="invoice-date">02/09/2024</span></p>
+            <p>Place of Supply: <span id="place-of-supply">State Name</span></p>
+            <p>Reverse Charge: <span id="reverse-charge">No</span></p>
+        </section>
+
+        <section class="items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Discount</th>
+                        <th>Net Amount</th>
+                        <th>Tax</th>
+                    </tr>
+                </thead>
+                <tbody id="item-list">
+                    <!-- Item rows will be inserted dynamically -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>Total Amount</td>
+                        <td id="total-amount">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <footer>
+            <p>For <span id="seller-name-footer">ABC Pvt Ltd</span></p>
+            <p><img src="signature_placeholder.png" alt="Signature"> Authorised Signatory</p>
+        </footer>
+    </div>
+
+    <button onclick="generatePDF()">Download PDF</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
